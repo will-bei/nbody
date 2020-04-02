@@ -1,5 +1,5 @@
 # nbody
-program that creates a 2000-frame animation of an n-body simulation
+Program that creates a 2000-frame animation of an n-body simulation
 
 Description:
 Program creates an n-body simulation. The dimensions of the simulation space is 4✕10^10 meters by 4✕10^10 meters. The gravitational constant used is 6.67✕10^10 m^3⋅kg^−1⋅s^−2. Initial masses of objects within the simulation are initialized randomly between 1✕10^22 kg to 1✕10^24 kg, inclusive.
@@ -46,5 +46,7 @@ magick mogrify -format jpeg *.bmp
 ffmpeg -framerate 33 -i %05d.jpeg -s:v 600x400 -c:v libx264 -pix_fmt yuv420p animation.mp4
 
 The result will be the animation file animation.mp4
+
+An example result has been included in this repository.
 
 ImageMagick must be installed for the animation to be created.
